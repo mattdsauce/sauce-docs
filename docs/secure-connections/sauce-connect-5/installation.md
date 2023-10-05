@@ -87,12 +87,13 @@ SHA256 checksums are available [here](https://saucelabs.com/downloads/sauce-conn
 
 <Tabs
 defaultValue="Linux/macOS"
-  values={[
-    {label: 'Linux/macOS Binary', value: 'Linux/macOS'},
-    {label: 'Linux Debian', value: 'Debian'},
-    {label: 'Linux RPM', value: 'RPM'},
-    {label: 'macOS brew', value: 'brew'},
-    {label: 'Windows (Powershell)', value: 'Windows'},
+values={[
+  {label: 'Linux/macOS Binary', value: 'Linux/macOS'},
+  {label: 'Linux Debian', value: 'Debian'},
+  {label: 'Linux RPM', value: 'RPM'},
+  {label: 'macOS brew', value: 'brew'},
+  {label: 'Windows (Powershell)', value: 'Windows'},
+  {label: 'Kubernetes', value: 'Kubernetes'},
   ]}>
 <TabItem value="Linux/macOS">
 
@@ -175,6 +176,15 @@ brew install saucelabs/tap/sauce-connect
 ```bash title="Using Powershell (Windows)"
 Invoke-RestMethod -Uri https://saucelabs.com/downloads/sauce-connect/5.0.0-alpha10/sauce-connect-5.0.0-alpha10_windows.x86_64.zip -OutFile sauce-connect-5.0.0-alpha10.zip
 Expand-Archive -Force -Path ./sauce-connect-5.0.0-alpha10.zip
+```
+
+  </TabItem>
+
+  <TabItem value="Kubernetes">
+
+```bash title="Using Kubernetes Helm chart"
+helm repo add saucelabs https://opensource.saucelabs.com/helm-charts
+helm install sauce-connect saucelabs/sauce-connect --values /path/to/sc-values.yaml
 ```
 
   </TabItem>
