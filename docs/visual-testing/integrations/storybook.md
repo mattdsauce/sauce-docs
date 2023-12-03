@@ -171,3 +171,7 @@ module.exports = {
 };
 
 ```
+
+## Example
+
+An example project is available [here](https://github.com/saucelabs/visual-examples/tree/main/storybook).
